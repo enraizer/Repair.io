@@ -223,120 +223,116 @@
 }
 .record_title{
 	width: 60%;
-	position: absolute;
+	position: absolute;	
 	left: calc((100% - 60%) / 2);
 }
 .line_01{
 	width: 80%;
 	left: calc((100% - 80%) / 2);
 	position: absolute;
-	padding-top: 10%;
+	top: 50%;
+	border-bottom: 6px solid black;
 }
 .line_02{
 	width: 80%;
 	left: calc((100% - 80%) / 2);
 	position: absolute;
-	padding-top: 25%;
+	top: 65%;
+	border-bottom: 6px solid black;
 }
 .line_03{
 	width: 80%;
 	left: calc((100% - 80%) / 2);
 	position: absolute;
-	padding-top: 30%;
+	top: 80%;
+	border-bottom: 6px solid black;
 }
 .dora{
 	height: 10%;
 	width: 100%;
 	position: absolute;
+	top: 40%;
 }
 .text_dora{
 	height: 100%;
-	width: 50%;
+	width: 60%;
 	font-family: "font_score";
 	font-size: 2vmax;
 	text-align: center;
-	padding-top: 2%;
 	float: left;
 }
 .score_dora{
 	height: 100%;
-	width: 50%;
+	width: 40%;
 	font-family: "font_score";
 	font-size: 2vmax;
 	text-align: center;
-	padding-top: 2%;
 	float: right;
 }
 .michael_jordan{
 	height: 10%;
 	width: 100%;
 	position: absolute;
-	padding-top: 15%;
+	top: 55%;
 }
 .text_michael_jordan{
 	height: 100%;
-	width: 50%;
+	width: 60%;
 	font-family: "font_score";
 	font-size: 1vmax;
 	text-align: center;
-	padding-top: 3%;
 	float: left;
 }
 .score_michael_jordan{
 	height: 100%;
-	width: 50%;
+	width: 40%;
 	font-family: "font_score";
 	font-size: 2vmax;
 	text-align: center;
-	padding-top: 2%;
 	float: right;
 }
 .toi{
 	height: 10%;
 	width: 100%;
 	position: absolute;
-	padding-top: 20%;
+	top: 70%;
 }
 .text_toi{
 	height: 100%;
-	width: 50%;
+	width: 60%;
 	font-family: "font_score";
-	font-size: 1vmax;
+	font-size: 2vmax;
 	text-align: center;
-	padding-top: 3%;
 	float: left;
 }
 .score_toi{
 	height: 100%;
-	width: 50%;
+	width: 40%;
 	font-family: "font_score";
 	font-size: 2vmax;
 	text-align: center;
-	padding-top: 2%;
 	float: right;
 }
 .olivier{
 	height: 10%;
 	width: 100%;
 	position: absolute;
-	padding-top: 20%;
+	top: 85%;
 }
 .text_olivier{
 	height: 100%;
-	width: 50%;
+	width: 60%;
 	font-family: "font_score";
 	font-size: 1vmax;
 	text-align: center;
-	padding-top: 3%;
 	float: left;
 }
 .score_olivier{
 	height: 100%;
-	width: 50%;
+	width: 40%;
 	font-family: "font_score";
 	font-size: 2vmax;
 	text-align: center;
-	padding-top: 2%;
 	float: right;
 }
 @font-face {
@@ -393,6 +389,7 @@
 	</div>
 
 
+
 	<div id="container_record" class="container_record">
 		<div id="cross_record" class="cross_record">
 			<img id="cross_record_img" class="cross_record_img" src="./images/cross.png" onclick="closeRcdWindow()">
@@ -407,11 +404,10 @@
 			</div>
 			<div id="score_dora" class="score_dora">
 				666
-			</div>
+			</div>		
 		</div>
 
-		<div id="line_001" class="container_line">
-			<img id="line_img_01" class="line_01" src="./images/line_01.png">
+		<div id="line_01" class="line_01">
 		</div>
 
 		<div id="michael_jordan" class="michael_jordan">
@@ -420,11 +416,10 @@
 			</div>
 			<div id="score_michael_jordan" class="score_michael_jordan">
 				540
-			</div>
+			</div>		
 		</div>
 
-		<div id="line_002" class="container_line">
-			<img id="line_img_02" class="line_02" src="./images/line_02.png">
+		<div id="line_02" class="line_02">
 		</div>
 
 		<div id="toi" class="toi">
@@ -432,12 +427,11 @@
 				toi
 			</div>
 			<div id="score_toi" class="score_toi">
-
-			</div>
+				<span class="my_score"></span>
+			</div>		
 		</div>
 
-		<div id="line_003" class="container_line">
-			<img id="line_img_03" class="line_03" src="./images/line_03.png">
+		<div id="line_03" class="line_03">
 		</div>
 
 		<div id="olivier" class="olivier">
@@ -446,7 +440,7 @@
 			</div>
 			<div id="score_olivier" class="score_olivier">
 				2
-			</div>
+			</div>		
 		</div>
 
 	</div>
@@ -459,8 +453,22 @@
 	var audioHome = new Audio('./sounds/onload_musical.mp3');
 	audioHome.loop = true;
 
+	var getUrlParameter = function getUrlParameter(sParam) {
+	    var sPageURL = window.location.search.substring(1),
+	        sURLVariables = sPageURL.split('&'),
+	        sParameterName,
+	        i;
 
+	    for (i = 0; i < sURLVariables.length; i++) {
+	        sParameterName = sURLVariables[i].split('=');
 
+	        if (sParameterName[0] === sParam) {
+	            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+	        }
+	    }
+	  };
+	  var record=getUrlParameter("record");
+	  $(".my_score").text(record);
 	var audioError = new Audio ('./sounds/error_01.mp3');
 
 	var whatIWantInMusic = true;

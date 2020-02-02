@@ -223,4 +223,8 @@ $(document).ready(function() {
     clearInterval(y);
   };
   var y = setInterval(createImage, difficulty);
+  $(document).on("click", ".rect", function () {
+    indexrecord = "index.html?record=" + score;
+    window.location.replace(indexrecord);
+  })
 });
