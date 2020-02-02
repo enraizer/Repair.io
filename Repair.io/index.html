@@ -1,0 +1,567 @@
+<style>
+	html, body{
+		margin: 0;
+		padding: 0;
+		cursor: url("./images/cursor.png"), pointer;
+		background-color: #245195;
+	}
+
+
+.background-home{
+	height: 100%;
+	width: 100%;
+  background-image: url("./images/background.jpg"), url("./images/back.jpg");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, repeat;
+	background-size: contain;
+	background-color: #245195;
+}
+
+.container_home{
+	height: 60%;
+	width: 40%;
+	position: absolute;
+	top: calc((100% - 30%) / 2);
+	left: calc((100% - 40%) / 2);
+}
+
+.button_play {
+	height: auto;
+	width: 50%;
+	position: relative;
+	border: 0px;
+	left: calc((100% - 50%) / 2);
+	z-index: 3;
+}
+.button_play:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+
+.button_options{
+	height: auto;
+	width: 85%;
+	position: relative;
+	border: 0px;
+	left: calc((100% - 85%) / 2);
+	z-index: 3;
+}
+.button_options:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+
+.button_record{
+	height: auto;
+	width: 70%;
+	position: relative;
+	border: 0px;
+	left: calc((100% - 70%) / 2);
+	z-index: 3;
+}
+.button_record:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+
+.space{
+	height: 7%;
+}
+.space_2{
+	height: 3%;
+}
+
+
+
+
+
+
+
+.container_options{
+	display: none;
+	height: 50%;
+	width: 30%;
+	top: calc((100% - 50%) / 2);
+	left: calc((100% - 30%) / 2);
+	background-color: #207CAB;
+	position: absolute;
+	border: 7px dashed black;
+	z-index: 999;
+	cursor: url("./images/cursor.png"), pointer;
+}
+
+
+.cross_options {
+	width: 100%;
+	height: 15%;
+
+}
+.cross_options_img {
+	float: right;
+	position: relative;
+	height: 80%;
+}
+.cross_options_img:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+
+
+
+.container_sound_options{
+	height: 20%;
+	width: 100%;
+	cursor: url("./images/cursor.png"), pointer;
+}
+#sound{
+	float: left;
+	padding-left: 20%;
+	height: 70%;
+	top:calc((100% - 70%) / 2);
+	padding-top: 2%;
+}
+#sound:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+#effect{
+	float: right;
+	padding-right: 20%;
+	height: 70%;
+	padding-top: 2%;
+}
+#effect:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+
+
+.container_language{
+	height: 40%;
+	width: 100%;
+
+}
+.language{
+	padding-top: 10%;
+	padding-left: 5%;
+	width: 46%;
+	float: left;
+}
+.fr_language{
+	width: 46%;
+	padding-top: 7%;
+}
+.fr_language:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+.shrek_language{
+	width: 35%;
+	padding-left: 50%;
+	padding-top: 5%;
+}
+.shrek_language:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+
+.credits{
+	height: 25%;
+}
+.credits_image{
+	height: 60%;
+	padding-top: 5%;
+	padding-left: 20%;
+}
+.credits_image:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+.credits_text{
+	animation-name: credits_rush;
+	animation-duration: 2.5s;
+	position: absolute;
+	z-index: 9999;
+	color: black;
+	font-size: 2vmax;
+	top: -20%;
+	animation-timing-function: linear;
+	display: none;
+	text-align: center;
+	width: 20%;
+	left: calc((100% - 20%) / 2);
+}
+@keyframes credits_rush{
+	0%{
+		top:-20%;
+	}
+	100%{
+		top: 120%;
+	}
+}
+
+
+.container_record{
+	display: none;
+	height: 50%;
+	width: 30%;
+	top: calc((100% - 50%) / 2);
+	left: calc((100% - 30%) / 2);
+	background-color: #207CAB;
+	position: absolute;
+	border: 7px dashed black;
+	z-index: 999;
+	cursor: url("./images/cursor.png"), pointer;
+}
+.cross_record {
+	width: 100%;
+	height: 15%;
+
+}
+.cross_record_img {
+	float: right;
+	position: relative;
+	height: 80%;
+}
+.cross_record_img:hover{
+	cursor: url("./images/cursor.png"), pointer;
+}
+.container_record_title{
+	height: 20%;
+	width: 100%;
+}
+.record_title{
+	width: 60%;
+	position: absolute;
+	left: calc((100% - 60%) / 2);
+}
+.line_01{
+	width: 80%;
+	left: calc((100% - 80%) / 2);
+	position: absolute;
+	padding-top: 10%;
+}
+.line_02{
+	width: 80%;
+	left: calc((100% - 80%) / 2);
+	position: absolute;
+	padding-top: 25%;
+}
+.line_03{
+	width: 80%;
+	left: calc((100% - 80%) / 2);
+	position: absolute;
+	padding-top: 30%;
+}
+.dora{
+	height: 10%;
+	width: 100%;
+	position: absolute;
+}
+.text_dora{
+	height: 100%;
+	width: 50%;
+	font-family: "font_score";
+	font-size: 2vmax;
+	text-align: center;
+	padding-top: 2%;
+	float: left;
+}
+.score_dora{
+	height: 100%;
+	width: 50%;
+	font-family: "font_score";
+	font-size: 2vmax;
+	text-align: center;
+	padding-top: 2%;
+	float: right;
+}
+.michael_jordan{
+	height: 10%;
+	width: 100%;
+	position: absolute;
+	padding-top: 15%;
+}
+.text_michael_jordan{
+	height: 100%;
+	width: 50%;
+	font-family: "font_score";
+	font-size: 1vmax;
+	text-align: center;
+	padding-top: 3%;
+	float: left;
+}
+.score_michael_jordan{
+	height: 100%;
+	width: 50%;
+	font-family: "font_score";
+	font-size: 2vmax;
+	text-align: center;
+	padding-top: 2%;
+	float: right;
+}
+.toi{
+	height: 10%;
+	width: 100%;
+	position: absolute;
+	padding-top: 20%;
+}
+.text_toi{
+	height: 100%;
+	width: 50%;
+	font-family: "font_score";
+	font-size: 1vmax;
+	text-align: center;
+	padding-top: 3%;
+	float: left;
+}
+.score_toi{
+	height: 100%;
+	width: 50%;
+	font-family: "font_score";
+	font-size: 2vmax;
+	text-align: center;
+	padding-top: 2%;
+	float: right;
+}
+.olivier{
+	height: 10%;
+	width: 100%;
+	position: absolute;
+	padding-top: 20%;
+}
+.text_olivier{
+	height: 100%;
+	width: 50%;
+	font-family: "font_score";
+	font-size: 1vmax;
+	text-align: center;
+	padding-top: 3%;
+	float: left;
+}
+.score_olivier{
+	height: 100%;
+	width: 50%;
+	font-family: "font_score";
+	font-size: 2vmax;
+	text-align: center;
+	padding-top: 2%;
+	float: right;
+}
+@font-face {
+	font-family: "font_score";
+	src: url('./fonts/04b_30/04b_30__.ttf');
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Repair.io</title>
+	<link rel="icon" type="image/png" href="images/icon.png"/>
+</head>
+<body id="sound_normal" onload="soundHome();">
+
+
+<div id="credits_text" class="credits_text" onclick="launchCredits()">
+
+</div>
+
+<div id="background-home" class="background-home">
+
+	<div id="container_options" class="container_options">
+		<div id="cross_options" class="cross_options">
+			<img id="cross_options_img" class="cross_options_img" src="./images/cross.png" onclick="closeOptWindow()">
+		</div>
+		<div id="container_sound_options" class="container_sound_options">
+			<img id="sound" class="soundo" src="./images/soundon.png" onclick="swapIconSound(this,'one')">
+			<img id="effect" class="effecto" src="./images/effecton.png" onclick="swapIconEffect(this,'two')">
+		</div>
+		<div id="container_language" class="container_language">
+			<img id="language" class="language" src="./images/langages.png">
+			<img id="fr_language" class="fr_language" src="./images/francais.png">
+			<img id="shrek_language" class="shrek_language" src="./images/shrek.png" onclick="launchGame()">
+		</div>
+		<div id="credits" class="credits">
+			<img id="credits_image" class="credits_image" src="./images/credits.png" onclick="launchCredits()">
+		</div>
+	</div>
+
+</div>
+
+
+	<div id="container_home" class="container_home">
+		<img id="button_play" class="button_play" onclick="launchGame()" src="images/play.png">
+		</img>
+		<div id="space" class="space"></div>
+		<img id="button_options" class="button_options" onclick="launchOptions()" src="images/options.png">
+		</img>
+		<div id="space_2" class="space_2"></div>
+		<img id="button_record" class="button_record" onclick="launchRecord()" src="images/record.png">
+		</img>
+	</div>
+
+
+	<div id="container_record" class="container_record">
+		<div id="cross_record" class="cross_record">
+			<img id="cross_record_img" class="cross_record_img" src="./images/cross.png" onclick="closeRcdWindow()">
+		</div>
+		<div id="container_record_title" class="container_record_title">
+			<img id="record_title" class="record_title" src="images/record.png">
+		</div>
+
+		<div id="dora" class="dora">
+			<div id="text_dora" class="text_dora">
+				Dora
+			</div>
+			<div id="score_dora" class="score_dora">
+				666
+			</div>
+		</div>
+
+		<div id="line_001" class="container_line">
+			<img id="line_img_01" class="line_01" src="./images/line_01.png">
+		</div>
+
+		<div id="michael_jordan" class="michael_jordan">
+			<div id="text_michael_jordan" class="text_michael_jordan">
+				Micheal B. Jordan
+			</div>
+			<div id="score_michael_jordan" class="score_michael_jordan">
+				540
+			</div>
+		</div>
+
+		<div id="line_002" class="container_line">
+			<img id="line_img_02" class="line_02" src="./images/line_02.png">
+		</div>
+
+		<div id="toi" class="toi">
+			<div id="text_toi" class="text_toi">
+				toi
+			</div>
+			<div id="score_toi" class="score_toi">
+
+			</div>
+		</div>
+
+		<div id="line_003" class="container_line">
+			<img id="line_img_03" class="line_03" src="./images/line_03.png">
+		</div>
+
+		<div id="olivier" class="olivier">
+			<div id="text_olivier" class="text_olivier">
+				Olivier de Carglass
+			</div>
+			<div id="score_olivier" class="score_olivier">
+				2
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	var audioHome = new Audio('./sounds/onload_musical.mp3');
+	audioHome.loop = true;
+
+
+
+	var audioError = new Audio ('./sounds/error_01.mp3');
+
+	var whatIWantInMusic = true;
+	var whatIWantInEffect = true;
+
+	function launchErrorAudio(){
+	  	audioError.play();
+	}
+	function stopSoundHome(){
+		audioHome.pause();
+	}
+	function soundInGame(){
+		if(whatIWantInMusic == true){
+		audioInGame.play();
+		}
+	}
+	function soundHome(){
+		audioHome.play();
+	}
+	function stopSoundInGame(){
+		audioInGame.pause();
+	}
+	function launchGame(){
+		stopSoundHome();
+		if(whatIWantInMusic == true){
+		launchErrorAudio();
+		}
+		alert("Il semblerait que votre ordinateur ait été piraté, nous rencontrons des difficultés à lancer le jeu, veuillez réessayer");
+
+	var game = "game.html?effect=" + whatIWantInEffect + "&music=" + whatIWantInMusic;
+    window.location.replace(game);
+	}
+	function launchOptions(){
+		document.getElementById("container_options").style.display="block";
+	}
+	function closeOptWindow(){
+		document.getElementById("container_options").style.display="none";
+	}
+	function swapIconSound(obj,abc){
+		var myClass = obj.className;
+		var myClas = myClass.substring(0, myClass.length - 1);
+		var lastChar = myClass[myClass.length -1];
+		if(lastChar == 'o'){
+			document.getElementById(myClas).src = "images/" + myClas + "off.png";
+			document.getElementById(myClas).className = myClas + 'f';
+			stopSoundHome();
+			whatIWantInMusic = false;
+		}else{
+			document.getElementById(myClas).src = "images/" + myClas + "on.png";
+			document.getElementById(myClas).className = myClas + 'o';
+			soundHome();
+			whatIWantInMusic = true;
+		}
+	}
+	function swapIconEffect(obj,abc){
+		var myClass = obj.className;
+		var myClas = myClass.substring(0, myClass.length - 1);
+		var lastChar = myClass[myClass.length -1];
+		if(lastChar == 'o'){
+			document.getElementById(myClas).src = "images/" + myClas + "off.png";
+			document.getElementById(myClas).className = myClas + 'f';
+			whatIWantInEffect = false;
+		}else{
+			document.getElementById(myClas).src = "images/" + myClas + "on.png";
+			document.getElementById(myClas).className = myClas + 'o';
+			whatIWantInEffect = true;
+		}
+	}
+	function launchCredits(){
+		document.getElementById("credits_text").style.display="block";
+		document.getElementById("credits_text").innerHTML="	Pasquier Benjamin<br>Pasquier Maxime<br>Ducret Maxime";
+		setTimeout("reloadCredits()", 2500);
+	}
+	function reloadCredits(){
+		document.getElementById("credits_text").style.display="none";
+	}
+	function launchRecord(){
+		document.getElementById("container_record").style.display="block";
+	}
+	function closeRcdWindow(){
+		document.getElementById("container_record").style.display="none";
+	}
+
+/*
+	function swapIcon(obj,abc) {
+		var myClass = obj.className;
+		var myClas = myClass.substring(0, myClass.length - 1);
+		var lastChar = myClass[myClass.length -1];
+		if(lastChar == 'o' && myClas == "music"){
+			document.getElementById(myClas).src = "images/" + myClas + "off.png";
+			document.getElementById(myClas).className = myClas + 'f';
+			stopMusique();
+		}else if(lastChar == 'o'){
+			document.getElementById(myClas).src = "images/" + myClas + "off.png";
+			document.getElementById(myClas).className = myClas + 'f';
+			alert("effecto -> effectoff")
+		}else {
+			document.getElementById(myClas).src = "images/" + myClas + "on.png";
+			document.getElementById(myClas).className = myClas + 'o';
+
+		}
+	}
+*/
+</script>

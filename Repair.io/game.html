@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hacker.io</title>
+  <link rel="stylesheet" href="css/game.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+@font-face {
+	font-family: "font_score";
+	src: url('./fonts/04b_30/04b_30__.ttf');
+}
+</style>
+
+
+<body style="background-image: url('images/background.jpg');">
+  <p style="font-family: "font_score";" class="score_">Score: <span id="score">0</span></p>
+  <div id="x">
+    <p class="loose">ORDINATEUR INFECTÉ</p>
+    <a class="loose rect" href="index.html">MENU</a>
+  </div>
+
+  <img src="#" class="icon" hidden="hidden" id="template" />
+</body>
+</html>
+
+<script src="js/script.js"></script>
+<script>
+    var audioInGame = new Audio('./sounds/muffin_song.mp3');
+  audioInGame.loop = true;
+
+</script>
